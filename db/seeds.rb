@@ -3,7 +3,9 @@ require 'json'
 
 puts "destroying previous data"
 
+Dose.destroy_all
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts "planting the seeds"
 

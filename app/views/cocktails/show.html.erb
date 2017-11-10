@@ -1,11 +1,18 @@
+
+
+
+<div class="all-container">
 <h1><%= @cocktail.name %></h1>
 
-<%= link_to 'Back to cocktails', cocktails_path, class: 'btn btn-primary' %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
+<div class="cocktail-links">
+<%= link_to 'Back to cocktails', cocktails_path, class: 'btn btn-primary' %>
 <%= link_to 'add ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-success' %>
+</div>
 
 <h3>Ingredients:</h3>
-
+<div class="ingredients-card">
 <ul class='list-unstyled'>
   <% @doses.each do |dose| %>
     <li class = 'ingredient-list'>
@@ -13,6 +20,12 @@
       <%= link_to 'remove ingredient', dose_path(dose), method: :delete, class: 'btn btn-danger' %>
     </li>
   <% end %>
-
 </ul>
+</div>
 
+<div class="form-container">
+<h3>Add an ingredient:</h3>
+<%= render 'doses/form' %>
+</div>
+
+</div>

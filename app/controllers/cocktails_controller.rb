@@ -1,4 +1,5 @@
 class CocktailsController < ApplicationController
+
   def index
     @cocktails = Cocktail.all
   end
@@ -12,6 +13,9 @@ class CocktailsController < ApplicationController
     @doses = Dose.all.where(cocktail_id: @cocktail.id)
     # @doses = doses.where(cocktail_id: @cocktail.id)
 
+    @dose = Dose.new
+
+    @ingredients  = Ingredient.all
     # @cocktail = Cocktail.find(params[:id])
     # @dose = Dose.new
     # # @ingredients = Ingredient.where()
@@ -32,7 +36,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
 

@@ -1,0 +1,49 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.all-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cocktail-card {
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px, 0px;
+  min-width: 400px;
+}
+
+.cocktail-description {
+  text-align: center;
+}
+
+.ingredients-card {
+  background-color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px, 0px;
+  min-width: 400px;
+}
+
+.ingredient-list {
+  padding: 20px;
+  border-bottom: 1px solid rgba(1,1,1,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-container {
+  padding: 30px;
+  justify-content: center;
+  background-color: white;
+  min-width: 400px;
+  box-shadow: 2px 2px 4px rgba(1,1,1,0.2);
+  border-radius: 4px;
+}
