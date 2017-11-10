@@ -9,6 +9,15 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @doses = Dose.all.where(cocktail_id: @cocktail.id)
+    # @doses = doses.where(cocktail_id: @cocktail.id)
+
+    # @cocktail = Cocktail.find(params[:id])
+    # @dose = Dose.new
+    # # @ingredients = Ingredient.where()
+    # @ingredients = Ingredient.all #.map do |i|
+    # #   i.name
+    # # end
   end
 
   def create
