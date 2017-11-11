@@ -21,6 +21,10 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
+      # render cocktail_path(@cocktail) #
+      # render 'doses/form'
+      # redirect_to cocktail_path(@cocktail)
+      # redirect_to cocktail_path(@cocktail), dose: @dose
       render :new
     end
   end

@@ -16,7 +16,7 @@
 <ul class='list-unstyled'>
   <% @doses.each do |dose| %>
     <li class = 'ingredient-list'>
-      <%= Ingredient.find(dose.ingredient_id).name %> <%= dose.description %>
+      <%= dose.description %> <%= Ingredient.find(dose.ingredient_id).name %>
       <%= link_to 'remove ingredient', dose_path(dose), method: :delete, class: 'btn btn-danger' %>
     </li>
   <% end %>
@@ -25,7 +25,7 @@
 
 <div class="form-container">
 <h3>Add an ingredient:</h3>
-<%= render 'doses/form' %>
+<%= render 'doses/form', dose: params[:dose] %>
 </div>
 
 </div>

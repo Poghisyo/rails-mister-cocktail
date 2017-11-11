@@ -9,13 +9,18 @@
     flex-direction: column;
 }
 
+.cocktails-container {
+  display: flex;
+}
+
 .cocktail-card {
-  background-color: white;
+  background-color: rgb(230, 230, 230);
   margin: 20px;
   display: flex;
   justify-content: space-around;
-  padding: 10px, 0px;
+  padding: 10px;
   min-width: 400px;
+  border-radius: 2px
 }
 
 .cocktail-description {
@@ -26,7 +31,7 @@
   background-color: white;
   margin: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px, 0px;
   min-width: 400px;
 }
