@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'faker'
 
 puts "destroying previous data"
 
@@ -18,6 +19,10 @@ attributes['drinks'].each do | ing|
   Ingredient.create!(name: ing.values[0])
 end
 
+ingredients = Ingredient.all
+20.times do
+  Cocktail.create!(name: Faker::OnePiece.island)
+end
 
 
 

@@ -6,22 +6,14 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+        @dose = Dose.new
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
     @doses = Dose.all.where(cocktail_id: @cocktail.id)
-    # @doses = doses.where(cocktail_id: @cocktail.id)
-
     @dose = Dose.new
-
     @ingredients  = Ingredient.all
-    # @cocktail = Cocktail.find(params[:id])
-    # @dose = Dose.new
-    # # @ingredients = Ingredient.where()
-    # @ingredients = Ingredient.all #.map do |i|
-    # #   i.name
-    # # end
   end
 
   def create

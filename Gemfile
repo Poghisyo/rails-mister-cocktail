@@ -7,6 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
 gem 'carrierwave', '~> 0.11.2'
 gem 'cloudinary'
 gem 'figaro'
@@ -20,6 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
+gem 'faker'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'

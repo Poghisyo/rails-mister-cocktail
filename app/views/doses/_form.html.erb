@@ -1,5 +1,6 @@
 <div class="dose-form">
 <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.error_notification %>
   <%= f.input :description, label: "specify the dose:" %>
   <%= f.association :ingredient, collection: @ingredients %>
 
